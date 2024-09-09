@@ -31,9 +31,10 @@ class DataIngestion:
             zip_file_path = os.path.join(zip_download_dir, data_file_name)
             logging.info(f"Downloading data from {dataset_url} into file {zip_file_path}")
 
-            file_id = dataset_url.split('/')[-2]
-            prefix = 'https://drive.google.com/uc?export=download&id='
-            gdown.download(prefix+file_id, zip_file_path)
+            # file_id = dataset_url.split('/')[-2]
+            # prefix = 'https://drive.google.com/uc?export=download&id='
+            # gdown.download(prefix+file_id, zip_file_path)
+            gdown.download(url=dataset_url, output=zip_file_path, fuzzy=True)
 
             logging.info(f"Downloading data from {dataset_url} into file {zip_file_path}")
 

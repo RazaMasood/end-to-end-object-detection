@@ -44,6 +44,7 @@ class ModelTrainer:
             os.system("rm -rf yolov5/runs")
             os.system("rm -rf train")
             os.system("rm -rf valid")
+            os.system("rm -rf test")
             os.system("rm -rf data.yaml")
 
             model_trainer_artifact = ModelTrainerArtifact(
